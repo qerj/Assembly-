@@ -13,6 +13,6 @@ int main()
 		push ecx
 		push eax
 		call printf
-		add esp, 8
+		add esp, 8 ; printf is a cdecl calling convention which will require the caller to clean the stack.
 	}
 }
