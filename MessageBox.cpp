@@ -19,7 +19,7 @@ int main()
 		push eax
 
 		call MessageBoxA
-
-		add esp, 0x16
+		
+		; we dont clean the stack because we are using a win32 api function which is all using stdcall which requires the callee to clean the stack.
 	}
 }
